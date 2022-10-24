@@ -237,7 +237,7 @@ export class MaskService extends MaskApplierService {
 		if (!value && value !== 0) {
 			return String(value);
 		}
-		return Number(value).toLocaleString('fullwide', {
+		return Number(value).toLocaleString('en-US', {
 			useGrouping: false,
 			maximumFractionDigits: 20,
 		});
