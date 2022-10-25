@@ -175,12 +175,10 @@ export class MaskService extends MaskApplierService {
             return String(value);
         }
 
-        console.log(Number(value).toLocaleString('en-US', {
+        return Number(value).toLocaleString('en-US', {
             useGrouping: false,
             maximumFractionDigits: 20,
-        }), Number(value).toString());
-
-        return Number(value).toString();
+        });
     }
     showMaskInInput(inputVal) {
         if (this.showMaskTyped && !!this.shownMaskExpression) {
